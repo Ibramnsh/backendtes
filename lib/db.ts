@@ -19,7 +19,7 @@ async function connectDB() {
     const opts = {
       bufferCommands: false,
     };
-    cachedConnection = await mongoose.connect(MONGODB_URI, opts);
+    cachedConnection = await mongoose.connect(MONGODB_URI!, opts);
     console.log("New MongoDB connection established.");
     return cachedConnection;
   } catch (error) {
